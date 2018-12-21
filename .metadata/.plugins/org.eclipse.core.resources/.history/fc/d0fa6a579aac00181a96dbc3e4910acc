@@ -1,0 +1,225 @@
+import java.util.Comparator;
+
+import components.map.Map;
+import components.map.Map1L;
+import components.queue.Queue;
+import components.queue.Queue1L;
+import components.sequence.Sequence;
+import components.sequence.Sequence1L;
+import components.simplereader.SimpleReader;
+import components.simplereader.SimpleReader1L;
+import components.simplewriter.SimpleWriter;
+import components.simplewriter.SimpleWriter1L;
+
+/**
+ * creates an html page with table of words in a text file and number of
+ * instances of each word
+ *
+ * @author Austin Bolomey.1
+ *
+ */
+public final class WordCounter {
+
+    /**
+     * Private constructor so this utility class cannot be instantiated.
+     */
+    private WordCounter() {
+    }
+
+    /**
+     * Compare {@code String}s in lexicographic order.
+     */
+    private static class StringLT implements Comparator<String> {
+        @Override
+        public int compare(String o1, String o2) {
+            return o1.compareToIgnoreCase(o2);
+        }
+    }
+
+    /**
+     * combines all sentences in the sequence into one long string
+     *
+     * @param input:
+     *            input sequence of strings
+     *
+     * @updates input
+     * @requires input != empty
+     * @returns a combined long string from input
+     */
+    public static String longstring(Sequence<String> input) {
+        assert input != null : "Violation of: input is not null";
+
+        //create return string
+        String output = "";
+
+        //concats all sentences in seq into one long string
+        while (input.length() > 0) {
+            output = output.concat(" " + input.remove(0) + " ");
+        }
+        return output;
+    }
+
+    /**
+     * combines all sentences in the sequence into one long string
+     *
+     * @param input:
+     *            input sequence of strings
+     *
+     * @updates input
+     * @requires input != empty
+     * @returns a combined long string from input
+     */
+    public static void removeandsep(String inputstring,
+            Sequence<String> inputseq) {
+        assert inputseq != null : "Violation of: inputseq is not null";
+        assert inputstring != null : "Violation of: inputstring is not null";
+
+        String temp = inputstring;
+        //removes all separator chars from the long string
+        temp = temp.replaceAll("[?!.,-]", " ");
+
+        //scans through the long string and separates the words into a sequence
+        String word = "";
+        for (int i = 0; i < temp.length() - 1; i++) {
+            String letter = temp.substring(i, i + 1);
+            //if not a space, add the letter to the blank string
+            if (!letter.equals(" ")) {
+                word += letter;
+            } else {
+                inputseq.add(inputseq.length(), word);
+
+                word = "";
+            }
+        }
+    }
+
+    /**
+     * sorts the words in seq into lexicographical order
+     *
+     * @param seq:
+     *            sequence of individual words
+     * @updates seq
+     * @requires seq != empty
+     * @ensures the strings in the seq will be arranged in lexicographical order
+     */
+    public static void sort(Sequence<String> seq) {
+        assert seq != null : "Violation of: terms is not null";
+
+        //declare comparator and make a temporary queue
+        Comparator<String> comp = new StringLT();
+        Queue<String> temp = new Queue1L<>();
+
+        //add all values from seq into temp queue
+        while (seq.length() > 0) {
+            temp.enqueue(seq.remove(0));
+        }
+        //sort the queue and add the values back into the seq
+        temp.sort(comp);
+        while (temp.length() > 0) {
+            seq.add(seq.length(), temp.dequeue());
+        }
+
+    }
+
+    /**
+     * sorts the words in seq into lexicographical order
+     *
+     * @param seq:
+     *            sequence of individual words
+     * @updates seq
+     * @requires seq != empty
+     * @ensures the strings in the seq will be arranged in lexicographical order
+     */
+    public static Sequence<String> removespaces(Sequence<String> seq) {
+        assert seq != null : "Violation of: terms is not null";
+
+        Sequence<String> temp = seq.newInstance();
+        for (int i = 0; i < seq.length(); i++) {
+            if (!seq.entry(i).equals("")) {
+                temp.add(temp.length(), seq.entry(i));
+            }
+        }
+
+        return temp;
+
+    }
+
+    /**
+     * creates an html page.
+     *
+     * @param terms
+     *            Strings in the Sequence
+     * @param counter
+     *            numbers of the Strings on the Sequence
+     * @param out
+     *            where to write the html file to
+     * @param title
+     *            original file name
+     * @requires <pre>
+     * terms != empty
+     * </pre>
+     * @ensures <pre>
+     * a functioning HTML page will be generated
+     * </pre>
+     */
+    public static void htmlfile(SimpleWriter out, Sequence<String> q,
+            Map<String, Integer> m, String title) {
+        assert out.isOpen() : "Violation of: out is not open";
+        assert q != null : "Violation of: queue is not null";
+        assert m != null : "Violation of: map is not null";
+        out.print("<html>\n" + "<head>\n" + "<title>Words Counted in " + title
+                + " </title>\n" + "</head>\n" + "<body>\n"
+                + "<h2>Words Counted in " + title + "</h2>\n" + "<hr />\n"
+                + "<table border=\"1\">\n" + "<tr>\n" + "<th>Words</th>\n"
+                + "<th>Counts</th>\n" + "</tr>");
+
+        int length = q.length();
+        for (int i = 0; i < length; i++) {
+            String temp = q.remove(0);
+            //adds each value into table with number of instances
+            if (m.hasKey(temp) && !temp.equals("")) {
+                out.print("<tr>\n" + "<td>" + temp + "</td>\n" + "<td>"
+                        + m.value(temp) + "</td>\n" + "</tr>");
+            }
+            temp = null;
+        }
+        out.print("</table>\n" + "</body>\n" + "</html>");
+    }
+
+    /**
+     * Main method.
+     *
+     * @param args
+     *            the command line arguments
+     */
+    public static void main(String[] args) {
+        SimpleReader in = new SimpleReader1L();
+        SimpleWriter out = new SimpleWriter1L();
+
+        //out.print("Please enter the name of the input data file: ");
+        //String inname = in.nextLine();
+        //SimpleReader filein = new SimpleReader1L("data/" + inname);
+        SimpleReader filein = new SimpleReader1L(
+                "http://web.cse.ohio-state.edu/software/2231/web-sw2/assignments/projects/count-words/data/gettysburg.txt");
+        //        out.print("Please input the name of the file to store the data: ");
+        //        String filename = in.nextLine();
+        //        SimpleWriter fileout = new SimpleWriter1L("doc/" + filename + ".html");
+
+        Sequence<String> sentences = new Sequence1L();
+        Sequence<String> words = new Sequence1L<>();
+        Sequence<String> words2 = new Sequence1L<>();
+        Map<String, Integer> map = new Map1L<String, Integer>();
+//adds all the lines into a sequence
+        while (!filein.atEOS()) {
+            sentences.add(sentences.length(), filein.nextLine());
+        }
+        String combinedstring = longstring(sentences);
+        removeandsep(combinedstring, words);
+        words2 = removespaces(words);
+        out.println(words2);
+        filein.close();
+        //fileout.close();
+        in.close();
+        out.close();
+    }
+}

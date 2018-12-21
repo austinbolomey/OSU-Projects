@@ -1,0 +1,225 @@
+import components.map.Map;
+import components.program.Program;
+import components.program.Program1;
+import components.queue.Queue;
+import components.set.Set;
+import components.set.Set1L;
+import components.simplereader.SimpleReader;
+import components.simplereader.SimpleReader1L;
+import components.simplewriter.SimpleWriter;
+import components.simplewriter.SimpleWriter1L;
+import components.statement.Statement;
+import components.utilities.Reporter;
+import components.utilities.Tokenizer;
+
+/**
+ * Layered implementation of secondary method {@code parse} for {@code Program}.
+ *
+ * @author Bolomey Bianco Poole
+ *
+ */
+public final class Program1Parse1 extends Program1 {
+
+    /*
+     * Private members --------------------------------------------------------
+     */
+
+    /**
+     * Parses a single BL instruction from {@code tokens} returning the
+     * instruction name as the value of the function and the body of the
+     * instruction in {@code body}.
+     *
+     * @param tokens
+     *            the input tokens
+     * @param body
+     *            the instruction body
+     * @return the instruction name
+     * @replaces body
+     * @updates tokens
+     * @requires <pre>
+     * [<"INSTRUCTION"> is a prefix of tokens]  and
+     *  [<Tokenizer.END_OF_INPUT> is a suffix of tokens]
+     * </pre>
+     * @ensures <pre>
+     * if [an instruction string is a proper prefix of #tokens]  and
+     *    [the beginning name of this instruction equals its ending name]  and
+     *    [the name of this instruction does not equal the name of a primitive
+     *     instruction in the BL language] then
+     *  parseInstruction = [name of instruction at start of #tokens]  and
+     *  body = [Statement corresponding to statement string of body of
+     *          instruction at start of #tokens]  and
+     *  #tokens = [instruction string at start of #tokens] * tokens
+     * else
+     *  [report an appropriate error message to the console and terminate client]
+     * </pre>
+     */
+    private static String parseInstruction(Queue<String> tokens,
+            Statement body) {
+        assert tokens != null : "Violation of: tokens is not null";
+        assert body != null : "Violation of: body is not null";
+        assert tokens.length() > 0 && tokens.front().equals("INSTRUCTION") : ""
+                + "Violation of: <\"INSTRUCTION\"> is proper prefix of tokens";
+
+        tokens.dequeue();
+        String name = tokens.dequeue();
+
+        String is = tokens.dequeue();
+        Reporter.assertElseFatalError(is.equals("IS"), "expected IS, ");
+        body.parseBlock(tokens);
+
+        tokens.dequeue();
+        String endingName = tokens.dequeue();
+        Reporter.assertElseFatalError(name.equals(endingName),
+                "Beginning and ending names don't match");
+        return name;
+    }
+
+    /*
+     * Constructors -----------------------------------------------------------
+     */
+
+    /**
+     * No-argument constructor.
+     */
+    public Program1Parse1() {
+        super();
+    }
+
+    /*
+     * Public methods ---------------------------------------------------------
+     */
+
+    @Override
+    public void parse(SimpleReader in) {
+        assert in != null : "Violation of: in is not null";
+        assert in.isOpen() : "Violation of: in.is_open";
+        Queue<String> tokens = Tokenizer.tokens(in);
+        this.parse(tokens);
+    }
+
+    @Override
+    public void parse(Queue<String> tokens) {
+        SimpleWriter out = new SimpleWriter1L();
+        assert tokens != null : "Violation of: tokens is not null";
+        assert tokens.length() > 0 : ""
+                + "Violation of: Tokenizer.END_OF_INPUT is a suffix of tokens";
+
+        //checks that first word is "PROGRAM"
+        String program = tokens.dequeue();
+        Reporter.assertElseFatalError(program.equals("PROGRAM"),
+                "Expected: PROGRAM , Was: " + program);
+
+        //makes sure name of program is an identifier
+        String name = tokens.dequeue();
+        Reporter.assertElseFatalError(Tokenizer.isIdentifier(name),
+                "Expected an identifier , Was: " + name);
+
+        //updates name of this
+        this.replaceName(name);
+
+        //checks to make sure next word is "IS"
+        String is = tokens.dequeue();
+        Reporter.assertElseFatalError(is.equals("IS"),
+                "Expected: IS , Was: " + is);
+
+        //map of instruction blocks
+        Map<String, Statement> context = this.newContext();
+        //set of instruction blocks
+        Set<String> instructions = new Set1L<String>();
+
+        //loops through instruction blocks until main BEGIN
+        while (!tokens.front().equals("BEGIN")) {
+
+            //adds the instruction body to the map of instruction blocks
+            Statement temp = this.newBody();
+            String instructBody = parseInstruction(tokens, temp);
+            out.println(instructBody);
+            context.add(instructBody, temp);
+            //if map already has key of body, throws error
+            Reporter.assertElseFatalError(!instructions.contains(instructBody),
+                    "Duplication of instruction identifiers.");
+
+            //adds instruction to set of instructions
+            instructions.add(instructBody);
+        }
+        while (instructions.size() > 0) {
+            String check = instructions.removeAny();
+
+            //checks that instruction name is not primitive
+            Reporter.assertElseFatalError(
+                    (!check.equals("turnright") || !check.equals("turnleft")
+                            || !check.equals("move") || !check.equals("infect")
+                            || !check.equals("skip")),
+                    "Instruction is a primitive call.");
+
+            Reporter.assertElseFatalError(!Tokenizer.isCondition(check),
+                    "Insruction name is a condition");
+
+            Reporter.assertElseFatalError(!check.equals(name),
+                    "Instruction name is the program identifier name");
+
+            Reporter.assertElseFatalError(!Tokenizer.isKeyword(check),
+                    "Instruction name is a keyword");
+        }
+
+        Statement blockBody = this.replaceBody(this.newBody());
+        //removes "begin"
+        tokens.dequeue();
+        blockBody.parseBlock(tokens);
+
+        //removes second last word, and checks that final word is the same as the name from beginning of the file
+        tokens.dequeue();
+        String endName = tokens.dequeue();
+        Reporter.assertElseFatalError(name.equals(endName),
+                "start and ending PROGRAM names dont match");
+
+        Reporter.assertElseFatalError(
+                Tokenizer.END_OF_INPUT.equals(tokens.front()),
+                "extra stuff cannot appear after the end of the program");
+
+        this.replaceName(name);
+        this.replaceContext(context);
+        this.replaceBody(blockBody);
+        out.close();
+    }
+
+    /*
+     * Main test method -------------------------------------------------------
+     */
+
+    /**
+     * Main method.
+     *
+     * @param args
+     *            the command line arguments
+     */
+    public static void main(String[] args) {
+        SimpleReader in = new SimpleReader1L();
+        SimpleWriter out = new SimpleWriter1L();
+        /*
+         * Get input file name
+         */
+
+        //        out.print("Enter valid BL program file name: ");
+        //        String fileName = in.nextLine();
+        String fileName = "./test/program4.bl";
+        /*
+         * Parse input file
+         */
+        out.println("*** Parsing input file ***");
+        Program p = new Program1Parse1();
+        SimpleReader file = new SimpleReader1L(fileName);
+        Queue<String> tokens = Tokenizer.tokens(file);
+        file.close();
+        p.parse(tokens);
+        /*
+         * Pretty print the program
+         */
+        out.println("*** Pretty print of parsed program ***");
+        p.prettyPrint(out);
+
+        in.close();
+        out.close();
+    }
+
+}

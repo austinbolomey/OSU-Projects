@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="2" timestamp="1523630145574" analysisTimestamp="1523630143258" release="">
+  <Project projectName="Tag_Cloud_Austin">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/Tag_Cloud_Austin/bin/TagCloud.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/Tag_Cloud_Austin/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/Tag_Cloud_Austin/test</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/Tag_Cloud_Austin/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="NextWordOrSeparatorTest">
+      <SourceLine classname="NextWordOrSeparatorTest" sourcefile="NextWordOrSeparatorTest.java" sourcepath="NextWordOrSeparatorTest.java"/>
+    </Class>
+    <Method classname="NextWordOrSeparatorTest" name="TagCloudGenerator" signature="(Lcomponents/simplereader/SimpleReader;Lcomponents/simplewriter/SimpleWriter;)Lcomponents/map/Map;" isStatic="true">
+      <SourceLine classname="NextWordOrSeparatorTest" start="121" end="147" startBytecode="0" endBytecode="432" sourcefile="NextWordOrSeparatorTest.java" sourcepath="NextWordOrSeparatorTest.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="NextWordOrSeparatorTest">
+      <SourceLine classname="NextWordOrSeparatorTest" sourcefile="NextWordOrSeparatorTest.java" sourcepath="NextWordOrSeparatorTest.java"/>
+    </Class>
+    <Method classname="NextWordOrSeparatorTest" name="nextWordOrSeparator" signature="(Ljava/lang/String;ILcomponents/set/Set;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="NextWordOrSeparatorTest" start="82" end="107" startBytecode="0" endBytecode="485" sourcefile="NextWordOrSeparatorTest.java" sourcepath="NextWordOrSeparatorTest.java"/>
+    </Method>
+    <SourceLine classname="NextWordOrSeparatorTest" start="94" end="94" startBytecode="120" endBytecode="120" sourcefile="NextWordOrSeparatorTest.java" sourcepath="NextWordOrSeparatorTest.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="TagCloud">
+      <SourceLine classname="TagCloud" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Class>
+    <Method classname="TagCloud" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="TagCloud" start="183" end="199" startBytecode="0" endBytecode="50" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Method>
+    <LocalVariable name="map" register="7" pc="74" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="TagCloud" start="193" end="193" startBytecode="72" endBytecode="72" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    <SourceLine classname="TagCloud" start="193" end="193" startBytecode="72" endBytecode="72" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="map"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="TagCloud">
+      <SourceLine classname="TagCloud" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Class>
+    <Method classname="TagCloud" name="TagCloudGenerator" signature="(Lcomponents/simplereader/SimpleReader;)Lcomponents/map/Map;" isStatic="true">
+      <SourceLine classname="TagCloud" start="123" end="154" startBytecode="0" endBytecode="454" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="TagCloud">
+      <SourceLine classname="TagCloud" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Class>
+    <Method classname="TagCloud" name="nextWordOrSeparator" signature="(Ljava/lang/String;ILcomponents/set/Set;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="TagCloud" start="85" end="110" startBytecode="0" endBytecode="485" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+    </Method>
+    <SourceLine classname="TagCloud" start="97" end="97" startBytecode="120" endBytecode="120" sourcefile="TagCloud.java" sourcepath="TagCloud.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 13 Apr 2018 10:35:42 -0400" total_classes="1" referenced_classes="23" total_bugs="5" total_size="89" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="5.26" clock_seconds="2.32" peak_mbytes="599.94" alloc_mbytes="1024.00" gc_seconds="0.16" priority_2="5">
+    <PackageStats package="" total_bugs="5" total_types="2" total_size="89" priority_2="5">
+      <ClassStats class="TagCloud" sourceFile="TagCloud.java" interface="false" size="89" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="519" invocations="346" avgMicrosecondsPerInvocation="1500" maxMicrosecondsPerInvocation="43381" standardDeviationMircosecondsPerInvocation="3714"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="424" invocations="2" avgMicrosecondsPerInvocation="212144" maxMicrosecondsPerInvocation="353953" standardDeviationMircosecondsPerInvocation="141809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="154" invocations="346" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="6552" standardDeviationMircosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckImmutableAnnotation" totalMilliseconds="120" invocations="1" avgMicrosecondsPerInvocation="120100" maxMicrosecondsPerInvocation="120100" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.XMLFactoryBypass" totalMilliseconds="119" invocations="1" avgMicrosecondsPerInvocation="119932" maxMicrosecondsPerInvocation="119932" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="96" invocations="7" avgMicrosecondsPerInvocation="13765" maxMicrosecondsPerInvocation="66354" standardDeviationMircosecondsPerInvocation="22130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="65" invocations="23" avgMicrosecondsPerInvocation="2858" maxMicrosecondsPerInvocation="17084" standardDeviationMircosecondsPerInvocation="4399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="62" invocations="74" avgMicrosecondsPerInvocation="846" maxMicrosecondsPerInvocation="17254" standardDeviationMircosecondsPerInvocation="2014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="51" invocations="7" avgMicrosecondsPerInvocation="7378" maxMicrosecondsPerInvocation="18681" standardDeviationMircosecondsPerInvocation="6797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="38" invocations="23" avgMicrosecondsPerInvocation="1673" maxMicrosecondsPerInvocation="15897" standardDeviationMircosecondsPerInvocation="3173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="37" invocations="7" avgMicrosecondsPerInvocation="5328" maxMicrosecondsPerInvocation="30886" standardDeviationMircosecondsPerInvocation="10538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="36" invocations="9" avgMicrosecondsPerInvocation="4046" maxMicrosecondsPerInvocation="9923" standardDeviationMircosecondsPerInvocation="3152"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1523592504827" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1523592504836" release="" codeSize="146" numClasses="2"/>
+  </History>
+</BugCollection>

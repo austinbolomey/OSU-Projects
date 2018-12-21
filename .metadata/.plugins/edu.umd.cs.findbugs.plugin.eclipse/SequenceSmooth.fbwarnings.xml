@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="28" timestamp="1517535593881" analysisTimestamp="1517535593611" release="">
+  <Project projectName="SequenceSmooth">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SequenceSmooth/bin/SequenceSmooth.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SequenceSmooth/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SequenceSmooth/test</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SequenceSmooth/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="12" last="13" removedByChange="true">
+    <Class classname="SequenceSmooth">
+      <SourceLine classname="SequenceSmooth" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    </Class>
+    <Method classname="SequenceSmooth" name="smooth" signature="(Lcomponents/sequence/Sequence;Lcomponents/sequence/Sequence;)V" isStatic="true">
+      <SourceLine classname="SequenceSmooth" start="37" end="49" startBytecode="0" endBytecode="71" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    </Method>
+    <LocalVariable name="result" register="2" pc="74" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="SequenceSmooth" start="41" end="41" startBytecode="73" endBytecode="73" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    <SourceLine classname="SequenceSmooth" start="41" end="41" startBytecode="73" endBytecode="73" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="result"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="26">
+    <Class classname="SequenceSmooth">
+      <SourceLine classname="SequenceSmooth" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    </Class>
+    <Method classname="SequenceSmooth" name="smooth" signature="(Lcomponents/sequence/Sequence;Lcomponents/sequence/Sequence;)V" isStatic="true">
+      <SourceLine classname="SequenceSmooth" start="36" end="73" startBytecode="0" endBytecode="84" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    </Method>
+    <LocalVariable name="s2" register="1" pc="93" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="SequenceSmooth" start="42" end="42" startBytecode="92" endBytecode="92" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    <SourceLine classname="SequenceSmooth" start="42" end="42" startBytecode="92" endBytecode="92" sourcefile="SequenceSmooth.java" sourcepath="SequenceSmooth.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="s2"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 1 Feb 2018 20:39:53 -0500" total_classes="1" referenced_classes="11" total_bugs="1" total_size="22" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="0.76" clock_seconds="0.27" peak_mbytes="686.17" alloc_mbytes="1024.00" gc_seconds="0.01" priority_1="1">
+    <PackageStats package="" total_bugs="1" total_types="1" total_size="22" priority_1="1">
+      <ClassStats class="SequenceSmooth" sourceFile="SequenceSmooth.java" interface="false" size="22" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="109" invocations="2" avgMicrosecondsPerInvocation="54570" maxMicrosecondsPerInvocation="103541" standardDeviationMircosecondsPerInvocation="48971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="78" invocations="295" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="4687" standardDeviationMircosecondsPerInvocation="548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="11" invocations="295" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="198" standardDeviationMircosecondsPerInvocation="22"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1517534312816" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1517534312816" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1517534325101" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1517534329049" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1517534359297" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1517535103103" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1517535171448" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1517535195472" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1517535204747" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1517535215387" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1517535218770" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1517535223775" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1517535233751" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1517535259482" release="" codeSize="18" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1517535314639" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1517535369534" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="16" timestamp="1517535376014" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="17" timestamp="1517535382789" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="18" timestamp="1517535408718" release="" codeSize="4" numClasses="1"/>
+    <AppVersion sequence="19" timestamp="1517535412337" release="" codeSize="4" numClasses="1"/>
+    <AppVersion sequence="20" timestamp="1517535418366" release="" codeSize="21" numClasses="1"/>
+    <AppVersion sequence="21" timestamp="1517535432857" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="22" timestamp="1517535450050" release="" codeSize="28" numClasses="1"/>
+    <AppVersion sequence="23" timestamp="1517535452225" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="24" timestamp="1517535489955" release="" codeSize="19" numClasses="1"/>
+    <AppVersion sequence="25" timestamp="1517535522082" release="" codeSize="21" numClasses="1"/>
+    <AppVersion sequence="26" timestamp="1517535527323" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="27" timestamp="1517535589366" release="" codeSize="22" numClasses="1"/>
+  </History>
+</BugCollection>

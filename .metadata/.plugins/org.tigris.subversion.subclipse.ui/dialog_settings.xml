@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="DirectorySelectionPage.lastParent_svn+ssh://stdlinux.cse.ohio-state.edu/project/c2231aa01/repos"/>
+	<item value="244" key="CommitDialog.location.y"/>
+	<item value="159" key="CommitDialog.location.x"/>
+	<item value="" key="DirectorySelectionPage.lastParent_svn+ssh://stdlinux.cse.ohio-state.edu/project/c2231aa20/repos"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="svn+ssh://stdlinux.cse.ohio-state.edu/project/c2231aa01/repos" key="RepositorySelectionPage.lastRepository"/>
+	<item value="493" key="CommitDialog.size.y"/>
+	<item value="1121" key="CommitDialog.size.x"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="svn+ssh://stdlinux.cse.ohio-state.edu/share/CSE/project/c2231ac15/repos&#x0A;"/>
+			<item value="svn+ssh://stdlinux.cse.ohio-state.edu/share/CSE/project/c2231ab15/repos&#x0A;"/>
+			<item value="svn++ssh://stdlinux.cse.ohio-state.edu/projects/c2231ab15/repos"/>
+			<item value="svn+ssh://stdlinux.cse.ohio-state.edu/project/c2231aa01/repos&#x0A;"/>
+		</list>
+	</section>
+</section>

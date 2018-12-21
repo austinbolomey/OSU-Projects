@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="450" key="DIALOG_X_ORIGIN"/>
+		<item value="80" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+		<item value="true" key="actionSetFilter"/>
+		<item value="true" key="uncategorizedFilter"/>
+		<item value="true" key="internalFilter"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="563" key="dialogHeight"/>
+		<item value="900" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.ui.wizards.new.project" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="FileSystemImportWizard">
+	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/project 3/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/project 2/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/project1/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/project8/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/project5/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/project3/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/SequencePalindrome.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/SequenceSmooth.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/project2/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/project1/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project11/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project10/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project9/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project8/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project 6/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project 5/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project 4/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/Project 3/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/project 2/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/Webpage/bolomey.1.zip"/>
+		</list>
+	</section>
+</section>

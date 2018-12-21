@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NaturalNumberOnString&apos; to &apos;NaturalNumberOnStringAustin&apos;" description="Rename resource &apos;NaturalNumberOnString&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/NaturalNumberOnString" name="NaturalNumberOnStringAustin" stamp="1517086854800" updateReferences="true"/>
+</session>

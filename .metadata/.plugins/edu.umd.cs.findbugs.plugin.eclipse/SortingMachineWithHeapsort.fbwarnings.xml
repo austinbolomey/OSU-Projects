@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="2" timestamp="1519838712245" analysisTimestamp="1519838710606" release="">
+  <Project projectName="SortingMachineWithHeapsort">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SortingMachineWithHeapsort/bin/SortingMachineTest$StringLT.class</Jar>
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SortingMachineWithHeapsort/bin/SortingMachineTest.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SortingMachineWithHeapsort/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SortingMachineWithHeapsort/src</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/SortingMachineWithHeapsort/test</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="2">
+    <Class classname="SortingMachineTest">
+      <SourceLine classname="SortingMachineTest" sourcefile="SortingMachineTest.java" sourcepath="SortingMachineTest.java"/>
+    </Class>
+    <Field classname="SortingMachineTest" name="ORDER" signature="LSortingMachineTest$StringLT;" isStatic="true">
+      <SourceLine classname="SortingMachineTest" sourcefile="SortingMachineTest.java" sourcepath="SortingMachineTest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="SortingMachineTest$StringLT">
+      <SourceLine classname="SortingMachineTest$StringLT" start="117" end="194" sourcefile="SortingMachineTest.java" sourcepath="SortingMachineTest.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 28 Feb 2018 12:25:10 -0500" total_classes="2" referenced_classes="32" total_bugs="2" total_size="39" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="5.33" clock_seconds="1.65" peak_mbytes="562.06" alloc_mbytes="1024.00" gc_seconds="0.08" priority_2="2">
+    <PackageStats package="" total_bugs="2" total_types="2" total_size="39" priority_2="2">
+      <ClassStats class="SortingMachineTest" sourceFile="SortingMachineTest.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="SortingMachineTest$StringLT" sourceFile="SortingMachineTest.java" interface="false" size="5" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="683" invocations="411" avgMicrosecondsPerInvocation="1661" maxMicrosecondsPerInvocation="76794" standardDeviationMircosecondsPerInvocation="5586"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="212" invocations="2" avgMicrosecondsPerInvocation="106421" maxMicrosecondsPerInvocation="183583" standardDeviationMircosecondsPerInvocation="77161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="100" invocations="32" avgMicrosecondsPerInvocation="3136" maxMicrosecondsPerInvocation="18998" standardDeviationMircosecondsPerInvocation="5070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="97" invocations="32" avgMicrosecondsPerInvocation="3035" maxMicrosecondsPerInvocation="33615" standardDeviationMircosecondsPerInvocation="6824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="70" invocations="109" avgMicrosecondsPerInvocation="645" maxMicrosecondsPerInvocation="5034" standardDeviationMircosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="37" invocations="413" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2766" standardDeviationMircosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="32" avgMicrosecondsPerInvocation="1108" maxMicrosecondsPerInvocation="17721" standardDeviationMircosecondsPerInvocation="3086"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1519838570564" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1519838570572" release="" codeSize="49" numClasses="2"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="567" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="388" key="DIALOG_HEIGHT"/>
+		<item value="144" key="DIALOG_Y_ORIGIN"/>
+		<item value="359" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/bolomey.1.zip"/>
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/project3.zip"/>
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/MapWithHashing.zip"/>
+			<item value="/Users/Austin/Documents/OSU FALL 2018/CSE 2231/HashingExperiments.zip"/>
+			<item value="/Users/Austin/Downloads/NaturalNumberOnString.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/WaitingLineFamilyDesign.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/BLParser.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/MapWithHashing.zip"/>
+			<item value="/Volumes/AUSTIN/CSE 2231/SequenceSmooth.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/NaturalNumberOnString.zip"/>
+			<item value="/Users/Austin/Documents/OSU SPRING 2018/CSE 2231/SetOnQueue.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/NaturalNumberCalculator.zip"/>
+			<item value="/Users/Austin/Downloads/AppendUndoGUI.zip"/>
+			<item value="/Users/Austin/Documents/OSU 2016-2017/CSE 2221/DemoGUI3.zip"/>
+			<item value="/class/software/2231/web-sw2/extras/instructions/waiting-line-interfaces/WaitingLineFamilyDesign.zip"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>

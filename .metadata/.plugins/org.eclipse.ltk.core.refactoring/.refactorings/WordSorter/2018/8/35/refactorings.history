@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;WordSorter&apos;&#x0A;- Original project: &apos;WordSorter&apos;&#x0A;- Original elements:&#x0A;     ProgramSkeleton.java&#x0A;     ProgramWithIO.java&#x0A;     ProgramWithIOAndStaticMethod.java&#x0A;     Temp.java" description="Delete elements" element1="/src&lt;{ProgramWithIO.java" element2="/src&lt;{ProgramWithIOAndStaticMethod.java" element3="/src&lt;{Temp.java" element4="/src&lt;{ProgramSkeleton.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1535649909622" subPackages="false" version="1.0"/>
+</session>

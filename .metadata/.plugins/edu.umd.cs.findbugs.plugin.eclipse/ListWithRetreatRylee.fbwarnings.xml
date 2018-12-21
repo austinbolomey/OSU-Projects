@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="8" timestamp="1540305052432" analysisTimestamp="1540305051347" release="">
+  <Project projectName="ListWithRetreatRylee">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/bin/List3$List3Iterator.class</Jar>
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/bin/List3$Node.class</Jar>
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/bin/List3.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/test</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ListWithRetreatRylee/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="5" last="6" removedByChange="true">
+    <Class classname="List3">
+      <SourceLine classname="List3" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Class>
+    <Method classname="List3" name="addRightFront" signature="(Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="List3" start="242" end="257" startBytecode="0" endBytecode="49" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Method>
+    <LocalVariable name="llnext" register="3" pc="63" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="List3" start="252" end="252" startBytecode="62" endBytecode="62" sourcefile="List3.java" sourcepath="List3.java"/>
+    <SourceLine classname="List3" start="252" end="252" startBytecode="62" endBytecode="62" sourcefile="List3.java" sourcepath="List3.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="llnext"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 23 Oct 2018 10:30:51 -0400" total_classes="3" referenced_classes="26" total_bugs="0" total_size="175" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="2.90" clock_seconds="1.09" peak_mbytes="493.16" alloc_mbytes="1024.00" gc_seconds="0.06">
+    <PackageStats package="" total_bugs="0" total_types="3" total_size="175">
+      <ClassStats class="List3" sourceFile="List3.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="List3$List3Iterator" sourceFile="List3.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="List3$Node" sourceFile="List3.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="172" invocations="2" avgMicrosecondsPerInvocation="86382" maxMicrosecondsPerInvocation="156337" standardDeviationMircosecondsPerInvocation="69954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="169" invocations="363" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="17298" standardDeviationMircosecondsPerInvocation="1277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="122" invocations="34" avgMicrosecondsPerInvocation="3592" maxMicrosecondsPerInvocation="99556" standardDeviationMircosecondsPerInvocation="16785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="76" invocations="33" avgMicrosecondsPerInvocation="2320" maxMicrosecondsPerInvocation="51171" standardDeviationMircosecondsPerInvocation="8806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="68" invocations="33" avgMicrosecondsPerInvocation="2090" maxMicrosecondsPerInvocation="43876" standardDeviationMircosecondsPerInvocation="7901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="32" invocations="51" avgMicrosecondsPerInvocation="646" maxMicrosecondsPerInvocation="8412" standardDeviationMircosecondsPerInvocation="1431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="30" invocations="365" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="2118" standardDeviationMircosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="27" avgMicrosecondsPerInvocation="1040" maxMicrosecondsPerInvocation="18933" standardDeviationMircosecondsPerInvocation="3544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="27" invocations="26" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="13502" standardDeviationMircosecondsPerInvocation="2558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="26" invocations="26" avgMicrosecondsPerInvocation="1018" maxMicrosecondsPerInvocation="8836" standardDeviationMircosecondsPerInvocation="1887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsyncGet" totalMilliseconds="22" invocations="3" avgMicrosecondsPerInvocation="7576" maxMicrosecondsPerInvocation="22652" standardDeviationMircosecondsPerInvocation="10660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="21" invocations="51" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="4224" standardDeviationMircosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="20" invocations="101" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="2064" standardDeviationMircosecondsPerInvocation="264"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1540304991540" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1540304991547" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="2" timestamp="1540304998127" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="3" timestamp="1540305002191" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="4" timestamp="1540305026951" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="5" timestamp="1540305034244" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="6" timestamp="1540305038303" release="" codeSize="176" numClasses="3"/>
+    <AppVersion sequence="7" timestamp="1540305041641" release="" codeSize="176" numClasses="3"/>
+  </History>
+</BugCollection>

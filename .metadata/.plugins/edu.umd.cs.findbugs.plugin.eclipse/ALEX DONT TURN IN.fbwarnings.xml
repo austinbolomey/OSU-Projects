@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="7" timestamp="1506532886576" analysisTimestamp="1506532886233" release="">
+  <Project projectName="ALEX DONT TURN IN">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ALEX DONT TURN IN/bin/RSSReader.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ALEX DONT TURN IN/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ALEX DONT TURN IN/test</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/ALEX DONT TURN IN/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 27 Sep 2017 13:21:26 -0400" total_classes="1" referenced_classes="17" total_bugs="0" total_size="117" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="0.56" clock_seconds="0.34" peak_mbytes="588.69" alloc_mbytes="1024.00" gc_seconds="0.02">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="117">
+      <ClassStats class="RSSReader" sourceFile="RSSReader.java" interface="false" size="117" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="121" invocations="353" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="28744" standardDeviationMircosecondsPerInvocation="1631"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="73" invocations="2" avgMicrosecondsPerInvocation="36886" maxMicrosecondsPerInvocation="66392" standardDeviationMircosecondsPerInvocation="29505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="12" invocations="17" avgMicrosecondsPerInvocation="713" maxMicrosecondsPerInvocation="4011" standardDeviationMircosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="12" invocations="353" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="107" standardDeviationMircosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="11" invocations="69" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="701" standardDeviationMircosecondsPerInvocation="147"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1506526066497" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1506526066497" release="" codeSize="118" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1506527162291" release="" codeSize="117" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1506527163417" release="" codeSize="117" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1506527165408" release="" codeSize="117" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1506527167463" release="" codeSize="117" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1506532863663" release="" codeSize="117" numClasses="1"/>
+  </History>
+</BugCollection>

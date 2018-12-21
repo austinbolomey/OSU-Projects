@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="1" timestamp="1536939499661" analysisTimestamp="1536939497886" release="">
+  <Project projectName="HashingExperiments">
+    <Jar>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/HashingExperiments/bin/HashingExploration.class</Jar>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/HashingExperiments/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/Austin/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/HashingExperiments/test</SrcDir>
+    <SrcDir>/Users/Austin/Documents/OSU 2016-2017/CSE 2221/workspace/HashingExperiments/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 14 Sep 2018 11:38:17 -0400" total_classes="1" referenced_classes="19" total_bugs="0" total_size="52" num_packages="1" java_version="1.8.0_144" vm_version="25.144-b01" cpu_seconds="4.36" clock_seconds="1.78" peak_mbytes="570.12" alloc_mbytes="1024.00" gc_seconds="0.04">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="HashingExploration" sourceFile="HashingExploration.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="488" invocations="2" avgMicrosecondsPerInvocation="244009" maxMicrosecondsPerInvocation="324051" standardDeviationMircosecondsPerInvocation="80040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="330" invocations="334" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="47367" standardDeviationMircosecondsPerInvocation="3655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="241" invocations="334" avgMicrosecondsPerInvocation="724" maxMicrosecondsPerInvocation="7383" standardDeviationMircosecondsPerInvocation="1174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="83" invocations="46" avgMicrosecondsPerInvocation="1805" maxMicrosecondsPerInvocation="38662" standardDeviationMircosecondsPerInvocation="6037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="53" invocations="64" avgMicrosecondsPerInvocation="838" maxMicrosecondsPerInvocation="11586" standardDeviationMircosecondsPerInvocation="1699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="46" invocations="19" avgMicrosecondsPerInvocation="2428" maxMicrosecondsPerInvocation="13406" standardDeviationMircosecondsPerInvocation="3709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="32" invocations="1" avgMicrosecondsPerInvocation="32664" maxMicrosecondsPerInvocation="32664" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="32" invocations="5" avgMicrosecondsPerInvocation="6474" maxMicrosecondsPerInvocation="17423" standardDeviationMircosecondsPerInvocation="7347"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1536939499661" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
